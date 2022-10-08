@@ -77,6 +77,7 @@ p {
   display: flex;
   margin-left: 93px;
   gap: 50px;
+  position: relative;
 }
 
 .header-logo {
@@ -92,6 +93,7 @@ p {
 }
 
 .header-link {
+  position: relative;
   display: block;
   font-weight: 500;
   line-height: 1.14;
@@ -99,6 +101,17 @@ p {
   color: var(--main-color);
   padding-top: 32px;
   padding-bottom: 32px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header-link.current::after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--hover-color);
+  border-radius: 2px;
 }
 
 .header-link.current {
@@ -124,6 +137,7 @@ p {
   color: var(--second-color);
   padding-top: 32px;
   padding-bottom: 32px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-list {
@@ -267,6 +281,29 @@ p {
   gap: 30px;
 }
 
+.practical-item {
+  position: relative;
+}
+
+.practical-about {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  bottom: 0;
+  right: 0;
+  padding: 27px 107px;
+  width: 100%;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+}
+.about-text {
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--adress-link-color);
+}
+
 .section-title {
   font-size: 36px;
   line-height: 1.16;
@@ -309,6 +346,7 @@ p {
   align-items: center;
   justify-content: center;
   color: var(--icon-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-soc-icon {
@@ -375,6 +413,7 @@ p {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   fill: var(--icon-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover,
@@ -436,6 +475,7 @@ p {
   font-style: normal;
   line-height: var(--typical-line-height);
   color: rgba(255, 255, 255, 0.6);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-contacts-link:hover,
@@ -469,6 +509,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background: rgba(255, 255, 255, 0.1);
   fill: var(--adress-link-color);
 }
@@ -517,6 +558,7 @@ p {
 }
 
 .header-link-portfolio {
+  position: relative;
   display: block;
   font-weight: 500;
   font-size: 14px;
@@ -525,6 +567,17 @@ p {
   color: var(--main-color);
   padding-top: 32px;
   padding-bottom: 32px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header-link-portfolio.current::after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--hover-color);
+  border-radius: 2px;
 }
 
 .header-link-portfolio:hover,
@@ -554,6 +607,7 @@ p {
   color: var(--second-color);
   padding-top: 32px;
   padding-bottom: 32px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-portfolio:hover,
@@ -595,6 +649,7 @@ p {
   border: transparent;
   cursor: pointer;
   padding: 6px 22px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover,
@@ -620,6 +675,30 @@ p {
 
 .project-item {
   width: calc((100% - 60px) / 3);
+}
+
+.project-item:hover .project-text-top {
+  transform: translate(0);
+}
+
+.project-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-text-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  height: 100%;
+  padding: 63px 24px;
+  color: var(--adress-link-color);
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .img {
@@ -690,6 +769,7 @@ p {
   font-weight: 400;
   line-height: var(--typical-line-height);
   color: rgba(255, 255, 255, 0.6);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress-contact-link-portfolio:hover,
@@ -724,6 +804,7 @@ p {
   justify-content: center;
   background: rgba(255, 255, 255, 0.1);
   fill: var(--adress-link-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .join-portfolio-link:hover,
